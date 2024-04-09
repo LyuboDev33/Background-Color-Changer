@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+  <link style="border-radius: 30px;" rel="icon" type="image/x-icon" href="./images/colorful.jpg">
+  <link rel="stylesheet" href="./style.css">
+  <title>Color Flipper</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="background-color">
+
+      <p class="color">Background Color:</p>
+
+      <button onclick="
+     document.body.style.background = `${generateRandomColor()}`
+      js();
+      " id="click" class="buttonclick">CLICK ME</button>
+
+    </div>
+  </div>
+
+  <script>
+
+    function generateRandomColor() {
+      let maxVal = 0xFFFFFF;
+      let randomNumber = Math.random() * maxVal;
+      randomNumber = Math.floor(randomNumber);
+      randomNumber = randomNumber.toString(16);
+      let randColor = randomNumber.padStart(6, 0);
+      return `#${randColor.toUpperCase()}`
+    }
+
+
+    document.body.style.background = generateRandomColor();
+
+    document.querySelector(".color").innerHTML = `Background Color: ${generateRandomColor()}`
+
+    let inner = document.getElementById("click", js)
+
+    function js() {
+      document.querySelector(".color").innerHTML = `Background Color: ${generateRandomColor()}`
+    }
+
+
+  </script>
+
+</body>
+
+</html>

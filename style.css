@@ -1,0 +1,43 @@
+* { 
+  font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+body { 
+  height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container { 
+  box-shadow: 1px 1px 4px black;
+  border-radius: 45px;
+  padding: 30px;
+  background: black;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+button { 
+  padding: 9px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: dodgerblue;
+    border: none;
+}
+
+button:hover { 
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+button:not(:hover) { 
+  transition: 0.5s;
+}
+
+button:active {  
+  padding: 10px;
+}
